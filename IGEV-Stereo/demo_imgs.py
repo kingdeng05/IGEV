@@ -1,6 +1,7 @@
 import sys
 sys.path.append('core')
-DEVICE = 'cuda'
+DEVICE = 'cpu'
+# DEVICE = 'cuda'
 import os
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import argparse
@@ -10,7 +11,7 @@ import torch
 from tqdm import tqdm
 from pathlib import Path
 from igev_stereo import IGEVStereo
-from utils.utils import InputPadder
+from igev_stereo.utils.utils import InputPadder
 from PIL import Image
 from matplotlib import pyplot as plt
 import os
